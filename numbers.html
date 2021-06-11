@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The grid: Three equal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 12px 12px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 250px;
+            cursor: pointer;
+            color: white;
+            margin: 50px 160px;
+
+        }
+
+        .containerTab {
+            height: 550px;
+            padding: 20px;
+            color: black;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Closable button inside the container tab */
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="back">
+       <a href="index.html">
+        <i class="fas fa-backward" style="color: #52AA5E;font-size: 25px;">Home</i>
+       </a> 
+
+    </div>
+    <div style="text-align:center; font-size: 55px;color: #8ACB88;" id="num1">
+        <h2>Numbers</h2>
+        <p style="font-size:20px;">Please click below to check methods</p>
+    </div>
+
+    <!-- Three columns -->
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:#FFBF46; color: black;">
+            1
+        </div>
+        <div class="column" onclick="openTab('b2');" style="background:#FFBF46;color: black;">
+            2
+        </div>
+        <div class="column" onclick="openTab('b3');" style="background:#FFBF46;color: black;">
+            3
+        </div>
+    </div>
+
+    <!-- Full-width columns: (hidden by default) -->
+    <div id="b1" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+            
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.parseFloat()</td>
+                    <td>Parses a string argument and returns a floating point number.Same as the global parseFloat() function.</td>
+                </tr>
+                <tr>
+                    <td>Number.parseInt()</td>
+                    <td>Parses a string argument and returns an integer of the specified radix or base. Same as the global parseInt() function</td>
+                </tr>
+                <tr>
+                    <td>Number.isFinite()</td>
+                    <td>Determines whether the passed value is a finite number.</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+    <div id="b2" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+            
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.isInteger()</td>
+                    <td>Determines whether the passed value is an integer.</td>
+                </tr>
+                <tr>
+                    <td>Number.isNaN()</td>
+                    <td>Determines whether the passed value is NaN. More robust version of the original global isNaN().</td>
+                </tr>
+                <tr>
+                    <td>Number.isSafeInteger()</td>
+                    <td>Determines whether the provided value is a number that is a safe integer.</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+    <div id="b3" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+            
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>toExponential()	</td>
+                    <td>Returns a string representing the number in exponential notation..</td>
+                </tr>
+                <tr>
+                    <td>toFixed()</td>
+                    <td>	Returns a string representing the number in fixed-point notation.</td>
+                </tr>
+                <tr>
+                    <td>toPrecision()</td>
+                    <td>Returns a string representing the number to a specified precision in fixed-point notation.</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <h4 class="txt">&COPY;Methods Teller</h4>
+    </footer>
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

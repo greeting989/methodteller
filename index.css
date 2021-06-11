@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Peralta&family=Playball&family=Poly&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("cool-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  
+}
+
+/*heading*/
+.heading{
+    margin: 8%;
+}
+.methodteller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #388659;
+    font-family: 'Peralta', cursive;
+}
+
+.subheading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 15rem;
+    color: #000000;
+    font-family: 'Pacifico', cursive;
+}
+.rectangle1{
+    width: 60%;
+    height: 1%;
+    margin-left: 22%;
+    box-shadow: 10px 9px 5px 0px rgba(0,0,0,0.75);
+    background: #C4C4C4;
+}
+.content{
+    font-size: 20px;
+    padding: 2% 3%;
+    color: #52AA5E;
+    margin: 2% 2%;
+    font-family: 'Playball', cursive;
+    
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    margin-top: 8%;
+}
+.number{
+    width: 250px;
+    height:100px;
+    background: #52AA5E;
+}
+.numtext,.strtxt{
+    font-family: 'Playball', cursive;
+    color: #2BD9FE;
+    text-align: center;
+    font-size: 30px;
+    padding: 8%;
+}
+
+.strings{
+    width: 250px;
+    height: 100px;
+    background: #52AA5E;
+}
+
+.arrays{
+    width: 250px;
+    height: 100px;
+    background: #52AA5E;
+}
+
+.arrtxt{
+    font-family: 'Playball', cursive;
+    text-align: center;
+    font-size: 30px;
+    padding: 8%;
+    color: #2BD9FE;
+}
+
+footer{ 
+    margin-top: 4.5%; 
+    background: #2BD9FE;
+}
+
+.txt{
+  text-align: center; 
+
+color: rgba(5, 5, 5, 0.92);
+
+}
+
+/*home*/
+
+.home
+{
+    color: #FFBF46;color: #FFBF46;
+
+}
+
+/*table*/
+th{
+    background-color: #000000;
+    color: white;
+    padding: 2px;
+}
+
+td{
+    border: 1px solid black;
+    height: 150px;
+    
+}
+@media screen and (max-width: 375px){
+    body{
+       height: 450px;
+       background-size: 115.625rem;
+      
+    }
+    .subheading{
+        left: 4rem;
+    }
+    .rectangle1{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 160px;
+       margin: 80px 50px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: space-between;
+        margin: 80px 50px;
+        
+    }
+}

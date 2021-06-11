@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The grid: Three equal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 12px 12px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 250px;
+            cursor: pointer;
+            color: white;
+            margin: 50px 160px;
+
+        }
+
+        .containerTab {
+            height: 550px;
+            padding: 20px;
+            color: black;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Closable button inside the container tab */
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        td {
+            height: 50px;
+        }
+        @media screen and (max-width: 375px){
+            .containerTab{
+                height: 950px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <a href="index.html">
+            <i class="fas fa-backward" style="color: #52AA5E;font-size: 25px;">Home</i>
+        </a>
+
+    </div>
+    <div style="text-align:center; font-size: 55px;color: #8ACB88;" id="num1">
+        <h2>Strings</h2>
+        <p style="font-size:20px;">Please click below to check methods</p>
+    </div>
+
+    <!-- Three columns -->
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:#FFBF46; color: black;">
+            1
+        </div>
+        <div class="column" onclick="openTab('b2');" style="background:#FFBF46;color: black;">
+            2
+        </div>
+        <div class="column" onclick="openTab('b3');" style="background:#FFBF46;color: black;">
+            3
+        </div>
+    </div>
+
+    <!-- Full-width columns: (hidden by default) -->
+    <div id="b1" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>split()</code></td>
+                    <td>Splits a string into an array of substrings</td>
+                </tr>
+                <tr>
+                    <td><code>charAt()</code></td>
+                    <td>Returns the character at the specified index</td>
+                </tr>
+                <tr>
+                    <td><code>charCodeAt()</code></td>
+                    <td>Returns the Unicode of the character at the specified index</td>
+                </tr>
+                <tr>
+                    <td><code>codePointAt()</code></td>
+                    <td>Returns a non-negative integer that is the Unicode code point value.</td>
+                </tr>
+                <tr>
+                    <td><code>String.fromCharCode()</code></td>
+                    <td>Converts Unicode values to characters</td>
+                </tr>
+                <tr>
+                    <td><code>String.fromCodePoint()</code></td>
+                    <td>Returns a string created by using the specified sequence of code points.</td>
+                </tr>
+                <tr>
+                    <td><code>concat()</code></td>
+                    <td>Joins two or more strings, and returns a new joined strings</td>
+                </tr>
+                <tr>
+                    <td><code>startsWith()</code></td>
+                    <td>Checks whether a string begins with specified characters</td>
+                </tr>
+                <tr>
+                    <td><code>endsWith()</code></td>
+                    <td>Checks whether a string ends with specified string/characters</td>
+                </tr>
+               
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div id="b2" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>indexOf()</code></td>
+                    <td>Returns the position of the first found occurrence of a specified value in a string</td>
+                </tr>
+                <tr>
+                    <td><code>lastIndexOf()</code></td>
+                    <td>Returns the position of the last found occurrence of a specified value in a string</td>
+                </tr>
+                <tr>
+                    <td><code>match()</code></td>
+                    <td>Searches a string for a match against a regular expression, and returns the matches</td>
+                </tr>
+                <tr>
+                    <td><code>replace()</code></td>
+                    <td>Searches a string for a specified value, or a regular expression, and returns a new string where
+                        the specified values are replaced</td>
+                </tr>
+                <tr>
+                    <td><code>repeat()</code></td>
+                    <td>Returns a new string with a specified number of copies of an existing string</td>
+                </tr>
+                <tr>
+                    <td><code>search()</code></td>
+                    <td>Searches a string for a specified value, or regular expression, and returns the position of the
+                        match</td>
+                </tr>
+                <tr>
+                    <td><code>slice()</code></td>
+                    <td>Extracts a part of a string and returns a new string</td>
+                </tr>
+                <tr>
+                    <td><code>substr()</code></td>
+                    <td>Extracts the characters from a string, beginning at a specified start position, and through the
+                        specified number of character</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="b3" class="containerTab" style="display:none;background:#C4C4C4">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <table class="table-resp">
+
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>substring()</code></td>
+                    <td>Extracts the characters from a string, between two specified indices</td>
+                </tr>
+                <tr>
+                    <td><code>localCompare()</code></td>
+                    <td>method returns a number indicating whether a reference string comes before, or after, or is the
+                        same as the given string in sort order.</td>
+                </tr>
+                <tr>
+                    <td><code>toLocaleLowerCase()</code></td>
+                    <td>Converts a string to lowercase letters, according to the host's locale</td>
+                </tr>
+                <tr>
+                    <td><code>toLocaleUpperCase()</code></td>
+                    <td>Converts a string to uppercase letters, according to the host's locale</td>
+                </tr>
+                <tr>
+                    <td><code>toLowerCase()</code></td>
+                    <td>Converts a string to lowercase letters</td>
+                </tr>
+                <tr>
+                    <td><code>toUpperCase()</code></td>
+                    <td>Converts a string to uppercase letters</td>
+                </tr>
+                <tr>
+                    <td><code>toString()</code></td>
+                    <td>Returns the value of a String object</td>
+                </tr>
+                <tr>
+                    <td><code>trim()</code></td>
+                    <td>Removes whitespace from both ends of a string</td>
+                </tr>
+                <tr>
+                    <td><code>valueOf()</code></td>
+                    <td>Returns the primitive value of a String object</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <h4 class="txt">&COPY;Methods Teller</h4>
+    </footer>
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+   
+</body>
+
+</html>
